@@ -1,0 +1,17 @@
+
+https://askubuntu.com/questions/564469/how-to-downgrade-java-for-example-java-7u72-to-7u67
+
+
+LNUM=$[$(update-alternatives --list java | wc -l) + 1]
+sudo mv path_to_jdk_folder /usr/lib/jvm/folder_name
+sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk1.8.0_191/bin/java" "$LNUM"
+sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/jdk1.8.0_191/bin/javac" "$LNUM"
+sudo update-alternatives --install "/usr/bin/javaws" "javaws" "/usr/lib/jvm/jdk1.8.0_191/bin/javaws" "$LNUM"
+
+
+echo "JAVA_HOME="/usr/lib/jvm/jdk1.8.0_191"" >> /etc/environment
+echo "export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_191" >> ~/.bashrc
+echo "export PATH=$JAVA_HOME/bin:$PATH" >> ~/.bashrc
+source ~/.bashrc
+
+Go to the above files and remove the old JAVA_HOME (oracle one) path variables and their paths from PATH variable (only in ~/.bashrc)
