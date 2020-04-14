@@ -9,3 +9,6 @@ https://blog.scottlogic.com/2016/07/28/java-enums-how-to-use-them-smarter.html
 https://javahungry.blogspot.com/2018/12/enum-in-java-complete-guide-with-examples.html
 https://javahungry.blogspot.com/2018/11/difference-between-enummap-and-hashmap-in-java.html
 https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html
+
+serialization:
+https://javarevisited.blogspot.com/2011/04/top-10-java-serialization-interview.html
